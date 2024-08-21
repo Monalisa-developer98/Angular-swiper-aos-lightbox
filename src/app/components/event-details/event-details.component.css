@@ -1,0 +1,55 @@
+.container{
+    padding: 50px 0;
+}
+
+h3{
+    font-size: 33px;
+    line-height: 43px;
+    color: #28036e;
+}
+.post-date{
+    font-size: 19px;
+    line-height: 29px;
+    color: #000;
+    font-weight: 500;
+    margin-left: 15px;
+}
+.post-content{
+    margin: 40px 0 45px 0;
+    font-size: 18px;
+    line-height: 28px;
+}
+.post-images img{
+    width: 100%;
+    height: auto;
+}
+.image-col{
+    margin-bottom: 70px;
+}
+.image-col{
+    overflow: hidden;
+}
+.image-col img{
+    transition: transform 0.3s ease-in-out;
+}
+.image-col:hover img {
+    transform: scale(1.1);
+}
+.image-slider{
+    padding: 0 0 50px 0 !important;
+}
+
+.swiper-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.swiper-slide img{  
+    height: 100%;
+    width: 100%;
+}
+.gallery-view{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}

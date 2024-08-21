@@ -1,0 +1,47 @@
+<div class="container">
+    <h1 class="h1 mb-4">Events</h1>
+    <div class="row mb-4">
+        <div class="col-10">
+            <div class="search-container">
+                <input type="text" name="search" id="search" placeholder="Search Event" class="form-control" [(ngModel)]="search" (ngModelChange)="onInputChange()">
+                <button class="clear-button" *ngIf="isClearButtonVisible" (click)="clearSearch()">X</button>
+                <button class="btn search-btn" type="submit" (click)="getEventList()">
+                    <img src="/assets/images/search-icon.png" alt="Search Icon">
+                </button>
+                
+            </div>
+        </div>
+        <div class="col-2">
+            <select name="year" id="year" class="form-select" [(ngModel)]="selectedYear" (change)="getEventList()">
+                <option value="" selected>All</option>
+                <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+            </select>
+        </div>
+    </div>
+    <div *ngIf="noDataFound" class="nodata-para d-flex gap-2 align-items-center">
+        <img src="../../../assets/images/file.png" alt="File Image"><p>No Data Found</p>
+    </div>
+
+    <div *ngIf="!noDataFound" class="row event-list-row">
+        <div class="col-md-4" *ngFor="let event of eventData">
+            <div class="event-col mb-4">
+                <div class="image-container">
+                    <img [src]="imageUrl + event.cover_image" alt="Event Image">
+                </div>
+                <div class="content-box">
+                    <h3 [innerHTML]="event.title"></h3>
+                    <a [routerLink]="['/events', event.slug]" class="read-btn">Read More <span class="openmoji--right-arrow"></span></a>
+                </div>
+                <div class="triangle">
+                    <div class="triangle-text">
+                        <span class="stat-date">{{event.start_date_val}}</span>
+                        <span class="stat-month">{{event.start_month_text}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+</div>
+
+
+<!-- [routerLink]="['/event', event.slug]" -->

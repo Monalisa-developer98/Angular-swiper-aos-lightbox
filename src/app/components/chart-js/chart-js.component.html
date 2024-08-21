@@ -1,0 +1,90 @@
+<div class="container p-5">
+    <h2 class="h2 mb-4 text-decoration-underline">Bar Chart</h2>
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <h3 class="mb-4">Basic</h3>
+            <div class="card">
+                <p-chart type="bar" [data]="basicData" [options]="basicOptions" />
+            </div>
+           </div>  
+           
+           <div class="col-md-4">
+            <h3 class="mb-4">Pie</h3>
+            <div class="card flex justify-content-center">
+                <p-chart type="pie" [data]="data" [options]="options" />
+            </div>
+           </div>
+
+           <div class="col-md-4">
+            <h3 class="mb-4">Doughnut</h3>
+            <div class="card flex justify-content-center">            
+                <p-chart type="doughnut" [data]="doughnutData" [options]="doughnutOptions" />
+            </div>
+           </div>
+    </div>
+
+    <hr>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <h3 class="mb-4">Vertical Bar</h3>
+            <div class="card">                
+                <p-chart type="bar" [data]="barData" [options]="barOptions" />
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="mb-4">Horizontal Bar</h3>
+            <div class="card">                
+                <p-chart type="bar" [data]="hBarData" [options]="hBarOptions" />
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="mb-4">Stacked Bar</h3>
+            <div class="card">                
+                <p-chart type="bar" [data]="stakedData" [options]="stackedOptions" />
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <h3 class="mb-4">Line</h3>
+            <div class="card">                
+                <p-chart type="line" [data]="lineData" [options]="lineOptions" />
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="mb-4">MultiAxis</h3>
+            <div class="card">                
+                <p-chart type="line" [data]="MultiAxisData" [options]="MultiAxisOptions" />
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="mb-4">Line Styles</h3>
+            <div class="card">                
+                <p-chart type="line" [data]="linesData" [options]="linesOptions" />
+            </div>
+        </div>       
+    </div>
+
+    <hr>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <h3 class="mb-4">Radar</h3>
+            <div class="card">                
+                <p-chart type="radar" [data]="radarData" [options]="radarOptions" />
+            </div>
+        </div> 
+        <div class="col-md-4">
+            <h3 class="mb-4">Combo</h3>
+            <div class="card">                
+                <p-chart type="line" [data]="comboData" [options]="comboOptions" />
+            </div>
+        </div>      
+    </div>
+
+</div>
